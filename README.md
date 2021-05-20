@@ -10,7 +10,7 @@
 2. Initialize manifests:
   ```
   repo init -u https://android.googlesource.com/platform/manifest -b android-6.0.1_r74 --depth=1
-  git clone https://github.com/ayufan-pine64/local_manifests -b marshmallow .repo/local_manifests
+  git clone https://github.com/Callahan633/local_manifests -b marshmallow .repo/local_manifests
   ```
 
 3. Checkout sources:
@@ -39,6 +39,8 @@
 
 I did backport minimal amount of Allwinner changes to make it run.
 You can see a commit history.
+
+Callahan633: I had changed remote for kernel sources with fixes for WM8904 external codec on I2S Euler Bus (based on: https://github.com/looperlative/linux-pine64-armbian/commits/ramstadt) and added to manifest Gapps from their new remote on gitlab
 
 ## Author
 

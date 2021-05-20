@@ -5,6 +5,7 @@
   <remote name="cm" fetch="https://github.com/CyanogenMod" />
   <remote name="opengapps" fetch="https://github.com/opengapps/"  />
   <remote name="google" fetch="https://github.com/google/"  />
+  <remote name="callahan633" fetch="https://github.com/Callahan633/"  />
 
   <remove-project name="platform/art" />
   <remove-project name="platform/cts" />
@@ -47,17 +48,25 @@
   <project path="kati" name="kati" remote="google" revision="master" groups="pdk" />
 
   <!-- Google Apps support -->
-  <project path="vendor/opengapps/atv-build" name="opengapps_atv_build" revision="nougat" remote="ayufan" />
+  <remote name="opengapps" fetch="https://github.com/opengapps/"  />
+  <remote name="opengapps-gitlab" fetch="https://gitlab.opengapps.org/opengapps/"  />
+
   <project path="vendor/opengapps/build" name="aosp_build" revision="master" remote="opengapps" />
-  <project path="vendor/opengapps/sources/all" name="opengapps-all" clone-depth="1" revision="refs/heads/marshmallow" remote="ayufan" />
-  <project path="vendor/opengapps/sources/arm" name="arm" clone-depth="1" revision="master" remote="opengapps" />
-  <project path="vendor/opengapps/sources/arm64" name="arm64" clone-depth="1" revision="master" remote="opengapps" />
+
+  <project path="vendor/opengapps/sources/all" name="all" clone-depth="1" revision="master" remote="opengapps-gitlab" />
+
+  <!-- arm64 depends on arm -->
+  <project path="vendor/opengapps/sources/arm" name="arm" clone-depth="1" revision="master" remote="opengapps-gitlab" />
+  <project path="vendor/opengapps/sources/arm64" name="arm64" clone-depth="1" revision="master" remote="opengapps-gitlab" />
+
+  <project path="vendor/opengapps/sources/x86" name="x86" clone-depth="1" revision="master" remote="opengapps-gitlab" />
+  <project path="vendor/opengapps/sources/x86_64" name="x86_64" clone-depth="1" revision="master" remote="opengapps-gitlab" />
 
   <!-- SuperSU -->
   <project path="vendor/supersu" name="vendor-supersu" clone-depth="1" revision="nougat" remote="ayufan" />
 
   <!-- Longsleep kernel for Pine A64 -->
-  <project path="linux/kernel-tulip" name="linux-pine64" clone-depth="1" remote="ayufan" revision="my-hacks-1.2" groups="pdk" />
+  <project path="linux/kernel-tulip" name="linux-pine64" clone-depth="1" remote="Callahan633" revision="wm8904_ported" groups="pdk" />
 
   <!-- Ethernet -->
   <project path="external/ethtool" name="android_external_ethtool" remote="ayufan" revision="s805_4.4.2_master" groups="pdk" />

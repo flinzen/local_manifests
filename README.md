@@ -10,7 +10,7 @@
 2. Initialize manifests:
   ```
   repo init -u https://android.googlesource.com/platform/manifest -b android-6.0.1_r74 --depth=1
-  git clone https://github.com/Callahan633/local_manifests -b my_hacks .repo/local_manifests
+  git clone https://github.com/Callahan633/local_manifests -b my-hacks .repo/local_manifests
   ```
 
 3. Checkout sources:
@@ -21,7 +21,7 @@
 3.1. Use git-lfs to pull opengapps in vendor/opengapps/
   ```
   repo forall -c git lfs pull
-  ```  
+  ```
 
 If nothing happens or error appears checkout master branch in subdirectories and use ```git lfs pull``` command manually 
 

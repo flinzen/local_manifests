@@ -4,7 +4,7 @@
   <remote name="omnirom" fetch="https://github.com/omnirom" />
   <remote name="cm" fetch="https://github.com/CyanogenMod" />
   <remote name="google" fetch="https://github.com/google/"  />
-  <remote name="callahan633" fetch="https://github.com/Callahan633/"  />
+  <remote name="Callahan633" fetch="https://github.com/Callahan633/"  />
 
   <remove-project name="platform/art" />
   <remove-project name="platform/cts" />

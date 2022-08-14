@@ -5,6 +5,7 @@
   <remote name="cm" fetch="https://github.com/CyanogenMod" />
   <remote name="google" fetch="https://github.com/google/"  />
   <remote name="Callahan633" fetch="https://github.com/Callahan633/"  />
+  <remote name="flinzen" fetch="https://github.com/flinzen/" />
 
   <remove-project name="platform/art" />
   <remove-project name="platform/cts" />
@@ -17,17 +18,23 @@
   <remove-project name="platform/hardware/libhardware" />
   <remove-project name="platform/system/bt" />
   <remove-project name="platform/system/core" />
+  <remove-project name="platform/system/vold" />
+  <remove-project name="platform/external/libnfc-nxp" />
+  <remove-project name="platform/external/e2fsprogs" />
+
 
   <!-- Device support -->
-  <project path="device/softwinner" name="device-softwinner" remote="ayufan" revision="marshmallow" groups="pdk" />
-  <project path="hardware/aw" name="hardware-aw" remote="ayufan" revision="marshmallow" groups="pdk" />
-  <project path="hardware/realtek" name="hardware-realtek" remote="ayufan" revision="marshmallow" groups="pdk" />
+  <project path="device/softwinner" name="device-softwinner" remote="flinzen" revision="marshmallow" groups="pdk" />
+  <project path="hardware/aw" name="hardware-aw" remote="flinzen" revision="marshmallow" groups="pdk" />
+  <project path="hardware/realtek" name="hardware-realtek" remote="flinzen" revision="marshmallow" groups="pdk" />
   <project path="vendor/ayufan-pine64/pine64-common" name="device-pine64-common" remote="ayufan" revision="master" groups="pdk" />
-  <project path="vendor/ayufan-pine64/boot-tools" name="boot-tools" remote="ayufan" revision="master" groups="pdk" />
+  <project path="vendor/ayufan-pine64/boot-tools" name="boot-tools" remote="flinzen" revision="master" groups="pdk" />
   <project path="vendor/ayufan-pine64/apps" name="vendor-ayufan-apps" remote="ayufan" revision="master" groups="pdk" />
+  <project path="vendor/hacks" name="vendor-hacks" remote="flinzen" revision="master" groups="pdk" />
 
   <!-- TWRP recovery -->
-  <project path="external/busybox" name="android_external_busybox" remote="ayufan" revision="nougat" groups="pdk" />
+  <project path="external/busybox" name="android_external_busybox" remote="flinzen" revision="nougat" groups="pdk" />
+  <project path="external/e2fsprogs" name="external-e2fsprogs" remote="flinzen" revision="master" groups="pdk" />
 
   <!-- Required system fixes -->
   <project path="build" name="build" remote="ayufan" revision="marshmallow" groups="pdk" >
@@ -35,12 +42,15 @@
   </project>
   <project path="external/sepolicy" name="external-sepolicy" remote="ayufan" revision="marshmallow" groups="pdk" />
   <project path="frameworks/av" name="frameworks-av" remote="ayufan" revision="marshmallow" groups="pdk" />
-  <project path="frameworks/base" name="frameworks-base" remote="ayufan" revision="marshmallow" groups="pdk" />
+  <project path="frameworks/base" name="frameworks-base" remote="flinzen" revision="marshmallow" groups="pdk" />
   <project path="frameworks/native" name="frameworks-native" remote="ayufan" revision="marshmallow" groups="pdk" />
   <project path="frameworks/wilhelm" name="frameworks-wilhelm" remote="ayufan" revision="marshmallow" groups="pdk" />
   <project path="hardware/libhardware" name="hardware-libhardware" remote="ayufan" revision="marshmallow" groups="pdk" />
   <project path="system/bt" name="system-bt" remote="ayufan" revision="marshmallow" groups="pdk" />
-  <project path="system/core" name="system-core" remote="ayufan" revision="marshmallow" groups="pdk" />
+  <project path="system/core" name="system-core" remote="flinzen" revision="marshmallow" groups="pdk" />
+  <project path="system/vold" name="system-vold" remote="flinzen" revision="master" groups="pdk" />
+  <project path="external/libnfc" name="libnfc" remote="flinzen" revision="marshmallow" groups="pdk" />
+  <project path="external/libfuse" name="external-libfuse" remote="flinzen" revision="marshmallow" groups="pdk" />
 
   <!-- Optional to support kati/ninja -->
   <project path="art" name="art" remote="ayufan" revision="marshmallow" groups="pdk" />
@@ -65,7 +75,7 @@
   <project path="vendor/supersu" name="vendor-supersu" clone-depth="1" revision="nougat" remote="ayufan" />
 
   <!-- Longsleep kernel for Pine A64 -->
-  <project path="linux/kernel-tulip" name="linux-pine64" clone-depth="1" remote="Callahan633" revision="my-hacks-1.2" groups="pdk" />
+  <project path="linux/kernel-tulip" name="linux-pine64" clone-depth="1" remote="flinzen" revision="wm8904" groups="pdk" />
 
   <!-- Ethernet -->
   <project path="external/ethtool" name="android_external_ethtool" remote="ayufan" revision="s805_4.4.2_master" groups="pdk" />

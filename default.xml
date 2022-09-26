@@ -31,6 +31,7 @@
   <project path="vendor/ayufan-pine64/boot-tools" name="boot-tools" remote="flinzen" revision="master" groups="pdk" />
   <project path="vendor/ayufan-pine64/apps" name="vendor-ayufan-apps" remote="ayufan" revision="master" groups="pdk" />
   <project path="vendor/hacks" name="vendor-hacks" remote="flinzen" revision="master" groups="pdk" />
+  <project path="vendor/DeviceTester" name="device-tester-prebuilt" remote="flinzen" revision="master" groups="pdk" />
 
   <!-- TWRP recovery -->
   <project path="external/busybox" name="android_external_busybox" remote="flinzen" revision="nougat" groups="pdk" />

@@ -10,7 +10,7 @@
 2. Initialize manifests:
   ```
   repo init -u https://android.googlesource.com/platform/manifest -b android-6.0.1_r74 --depth=1
-  git clone https://github.com/Callahan633/local_manifests -b my-hacks .repo/local_manifests
+  git clone https://github.com/flinzen/local_manifests -b my-hacks .repo/local_manifests
   ```
 
 3. Checkout sources:
@@ -18,10 +18,17 @@
   repo sync -c
   ```
 
-3.1. Use git-lfs to pull opengapps in vendor/opengapps/
-  ```
-  repo forall -c git lfs pull
-  ```
+3.1.
+```
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
+apt install git-lfs
+```
+
+3.2 In Android directory
+```
+cd vendor/opengapps/sources/
+for d in ./*/ ; do (cd  && git lfs pull); done
+```
 
 If nothing happens or error appears checkout master branch in subdirectories and use ```git lfs pull``` command manually 
 
@@ -36,11 +43,8 @@ If nothing happens or error appears checkout master branch in subdirectories and
 
 5. Create SD card image:
   ```
-  sdcard_image pine64_android_6.img.gz
+  sdcard_image pine64_android_6.img.gz sopine
   ```
-
-6. Write image to SD card with Rasplex Installer (this is multiplatform tool):
-  https://github.com/RasPlex/rasplex-installer/releases or use `DD`.
 
 ## Changes
 
